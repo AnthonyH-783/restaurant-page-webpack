@@ -1,0 +1,65 @@
+{
+  "currency": "CAD",
+  "menu": {
+    "sushi": [
+      {
+        "title": "Salmon Nigiri",
+        "description": "Fresh raw salmon served over lightly seasoned sushi rice.",
+        "price_cents": 650
+      },
+      {
+        "title": "Tuna Nigiri",
+        "description": "Lean cuts of raw tuna placed atop hand-pressed sushi rice.",
+        "price_cents": 700
+      }
+    ],
+    "sashimi": [
+      {
+        "title": "Salmon Sashimi",
+        "description": "Thick slices of premium raw salmon served without rice.",
+        "price_cents": 1400
+      },
+      {
+        "title": "Tuna Sashimi",
+        "description": "Fresh raw tuna sliced and presented in traditional style.",
+        "price_cents": 1500
+      }
+    ],
+    "rolls": [
+      {
+        "title": "California Roll",
+        "description": "Crab meat, avocado, and cucumber rolled in seasoned rice and seaweed.",
+        "price_cents": 900
+      },
+      {
+        "title": "Spicy Tuna Roll",
+        "description": "Chopped tuna mixed with spicy sauce, rolled with rice and nori.",
+        "price_cents": 1000
+      }
+    ],
+    "soups": [
+      {
+        "title": "Miso Soup",
+        "description": "Traditional soybean paste broth with tofu, seaweed, and green onions.",
+        "price_cents": 350
+      },
+      {
+        "title": "Clear Soup",
+        "description": "Light broth with mushrooms and scallions, served before the meal.",
+        "price_cents": 300
+      }
+    ],
+    "drinks": [
+      {
+        "title": "Green Tea",
+        "description": "Hot Japanese green tea served unsweetened.",
+        "price_cents": 250
+      },
+      {
+        "title": "Ramune",
+        "description": "Classic Japanese carbonated soda with a marble seal.",
+        "price_cents": 450
+      }
+    ]
+  }
+}

@@ -26,13 +26,17 @@ module.exports = {
     module : {
         rules: [
             {
-                test: "/\.css$/i", // Regex matching css file types
+                test: /\.css$/i, // Regex matching css file types
                 use:  ["style-loader", "css-loader"] // Loaders applied to css imports
             },
             {
-                test: "/\.(png|jpg|jpeg)$/i",
-                use: "asset/ressource",
-            }
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset/resource",
+            },
+            {
+                test: /\.html$/i,
+                loader: "html-loader",
+            },
         ]
     }
 }

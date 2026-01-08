@@ -17,11 +17,14 @@
   /* Text */
   --text-primary: #F5EBDD;
   --text-secondary: #C9B8A6;
-  --text-nav: rgba(255, 255, 255, 0.9);
+  --text-nav: #C7C7C7;
   --hovered-nav: #f2b94c;
 
   /*Layout */
   --nav-height: 6rem;
+}
+body{
+  position: relative;
 }
 
 
@@ -56,30 +59,48 @@
   font-weight: 600;
   font-style: normal;
 }
+body{
+  position: relative;
+  overflow: visible;
+}
 
 header{
     height: 100vh;
     width: 100vw;
     background-color: rgba(63, 62, 62, 0.2);
 }
+    /*
+  Source - https://stackoverflow.com/a
+  Posted by sagar kashyap, modified by community. See post 'Timeline' for change history
+  Retrieved 2025-12-20, License - CC BY-SA 4.0
+  */
+
 
 nav{
-    border: 1px solid black;
+    
     height: var(--nav-height);
     padding: 1.5rem;
-    background-color: rgba(0, 0, 0, 0.897);
-    backdrop-filter: blur(5px);
+    background-color: #393838;
+    backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: 1px 2px 1px black;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    width: 100%;
-    top:0;
+    position: sticky;
+    margin-top: -6rem;
+    top: 1%;
+    width: 90%;
+    border-radius: 10px;
+    opacity: 0.75;
+    left: 5%;
     z-index: 2;
 }
 
+a{
+  text-decoration: none;
+  color: var(--text-nav);
+}
 nav ul li{
     display: inline;
     font-size: 18px;
@@ -91,19 +112,23 @@ nav ul li:hover{
     color: var(--color-secondary);
     cursor: pointer;
 }
-nav img{
-    max-width: 7em;
-    max-height: 7em;
-    margin: 0 4rem 0 4rem;
-    
-  
-}
+
+
 header img{
     filter: brightness(60%);
     width: 100%;
     height: 100%;
 }
+nav img{
+    max-width: 7em;
+    max-height: 8em;
+    margin: 0 4rem 0 4rem;
+    filter: brightness(100%);
+    opacity: 1;
+}
+
 
 #container{
-  
+  min-height: 110vh;
+  width: 100vw;
 }
