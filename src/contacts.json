@@ -1,0 +1,13 @@
+{
+  "contact": {
+    "phone": "+1-000-000-0000",
+    "email": "contact@example.com",
+    "address": {
+      "street": "123 Frostbite Road",
+      "city": "Diomede",
+      "province": "Alaska",
+      "postal_code": "00000",
+      "country": "USA"
+    }
+  }
+}

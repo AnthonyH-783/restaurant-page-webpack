@@ -1,0 +1,24 @@
+.hours-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: center;
+    padding: 4rem;
+    gap: 1rem;
+    background-color: #0e0e0e;;
+    color: var(--text-primary);
+}
+.hours-container h3{
+    color: #ffffff;
+    font-size: clamp(2rem, 4vw, 3rem);
+    margin-bottom: 3rem;
+    padding-top: 3rem;
+    font-family: "Playfair Display", serif;
+}
+.hours-container div{
+  font-size: 18px;
+  text-transform: capitalize;
+  color: white;
+  font-family: "Inter", sans-serif;
+  letter-spacing: 0.02em;
+}

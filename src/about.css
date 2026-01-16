@@ -1,12 +1,30 @@
-.container{
+.about-container{
+    position: relative;
     display: flex;
+    flex-direction: row;
+    background-color: #0e0e0e;
     justify-content: center;
     align-items: center;
-    padding: 4rem;
+    gap: 4rem;
     color: var(--text-primary);
+}
+.about-container h2{
+    position: absolute;
+    color: var(--text-primary);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    padding-top: 3rem;
+    left: 45%;
+    top: 4rem;
+    
+}
+img{
+    width: 30vw;
 }
 
 .desc-div{
+    gap: 3rem;
+    width: 30vw;
     display: flex;
     flex-direction: column;
     justify-content: center;

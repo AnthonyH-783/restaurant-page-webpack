@@ -1,0 +1,9 @@
+{
+  "hours": {
+    "monday":    { "open": "17:00", "close": "22:00" },
+    "tuesday":   { "open": "17:00", "close": "22:00" },
+    "wednesday": { "open": "17:00", "close": "22:00" },
+    "thursday":  { "open": "17:00", "close": "22:00" },
+    "friday":    { "open": "17:00", "close": "22:00" }
+  }
+}

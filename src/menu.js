@@ -10,13 +10,15 @@ import data from  "./menu.json"; // data is a plain javascript object
  */
 function generate_menu(container, category){
     // Applying flex property to container
-    container.classList.add("container");
     const header = createHeader();
     const menu_tabs = createMenuTabs();
     const listing = createMenuListing(category);
     container.appendChild(header);
     container.appendChild(menu_tabs);
     container.appendChild(listing);
+
+    container.classList.remove(...container.classList);
+    container.classList.add("menu-container");
 
 
 }
@@ -107,7 +109,9 @@ function createMenuItem(title, description, price){
 
 function clearMenu(container){
 
+
     while(container.children.length > 0) container.removeChild(container.firstChild);
+    
 
 }
 

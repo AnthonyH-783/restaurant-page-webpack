@@ -69,12 +69,10 @@ header{
     width: 100vw;
     background-color: rgba(63, 62, 62, 0.2);
 }
-    /*
-  Source - https://stackoverflow.com/a
-  Posted by sagar kashyap, modified by community. See post 'Timeline' for change history
-  Retrieved 2025-12-20, License - CC BY-SA 4.0
-  */
 
+#logo{
+  cursor: pointer;
+}
 
 nav{
     

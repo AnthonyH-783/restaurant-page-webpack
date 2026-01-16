@@ -1,12 +1,13 @@
 import "./about.css";
 import desc from "./about.json";
-import img from "./images/about.jpg";
-import path from "path";
-console.log(img);
-const img_url = "./images/about.jpg";
+import img_url from "./images/about.jpg";
 
 function generate(container){
 
+    // Generating container title
+    const section_name = document.createElement("h2");
+    section_name.innerText = "About Us";
+    container.appendChild(section_name);
     // Generating image on left hand side
     const img = document.createElement("img");
     img.src = img_url;
@@ -29,7 +30,8 @@ function generate(container){
     container.appendChild(div);
 
     // Applying CSS
-    container.classList.add("container");
+    container.classList.remove(...container.classList);
+    container.classList.add("about-container");
     div.classList.add("desc-div");
 
 }

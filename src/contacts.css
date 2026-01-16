@@ -1,0 +1,21 @@
+.contacts-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    align-items: baseline;
+    padding: 4rem;
+    gap: 1rem;
+    background-color: #0e0e0e;;
+    color: var(--text-primary);
+
+}
+
+.contacts-container h3{
+    color: var(--text-primary);
+    font-family: "Playfair Display", serif;
+    font-size: clamp(1rem, 3vw, 2rem);
+    padding-top: 3rem;
+    left: 45%;
+    top: 4rem;
+    
+}

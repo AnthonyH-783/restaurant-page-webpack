@@ -1,5 +1,7 @@
 import * as Menu from "./menu"; // Menu Module
-import * as About from "./about" // About Module
+import * as About from "./about";// About Module
+import * as Hours from "./hours"; //Hours Module
+import * as Contacts from "./contacts"; // Contacts module
 import "./styles.css";
 
 
@@ -11,8 +13,10 @@ import "./styles.css";
 (function ScreenController(){
     // Selecting DOM Elements
     const container = document.getElementById("container");
+    const header = document.getElementById("header");
     const nav = document.querySelector("nav");
     const nav_tabs = nav.children;
+    const logo = document.getElementById("logo");
     console.log(nav_tabs);
     const DEFAULT_SELECTION = "menu";
     const DEFAULT_CATEGORY = "sushi";
@@ -26,7 +30,7 @@ import "./styles.css";
         setTimeout(function () {
             ref.scrollIntoView({
                 behavior: "smooth",
-                block: "start",
+                block: "end",
             });
         }, 100);
     };
@@ -34,12 +38,14 @@ import "./styles.css";
     // Creating listeners for click events
     (function clickHandler(){
         const arr = Array.from(nav_tabs);
-        console.log(arr);
         arr.forEach((tab) => {
-            tab.addEventListener("click", scrollToMyRef("container"));
-        })
+            tab.addEventListener("click", scrollToMyRef("header"));
+        });
+        logo.addEventListener("click", logoClickHandler);
         nav.addEventListener("click", menuClickHandler);
         nav.addEventListener("click", aboutUsClickHandler);
+        nav.addEventListener("click", hoursClickHandler);
+        nav.addEventListener("click", contactsClickHandler);
         container.addEventListener("click", toggleMenuCategory);
 
 
@@ -63,6 +69,14 @@ import "./styles.css";
         const category = event.target.innerText.toLowerCase();
         Menu.clearMenu(container);
         Menu.generate_menu(container, category);  
+    }
+    /**
+     * Handler for logo clicking
+     */
+    function logoClickHandler(){
+
+        header.scrollIntoView({behavior: "smooth", block: "start"});
+        
     }
     /**
      * Handler for clicking on the "Menu" section
@@ -93,8 +107,27 @@ import "./styles.css";
     /**
      * Handler for clicking on the "Hours" section
      */
+    function hoursClickHandler(event){
+        // Extracting and validating data
+        const node = extractEventData(event);
+        if(!node.el || node.node_name !== "A" || node.text !== "hours") return;
+
+        // Rendering Container
+        container.innerHTML = "";
+        Hours.generate(container);
+    }
 
     /**
      * Handler for clicking on the "Contact Us" section
      */
+    function contactsClickHandler(event){
+        // Extracting and validating data
+        const node = extractEventData(event);
+        if(!node.el || node.node_name !== "A" || node.text !== "contact us") return;
+
+        // Rendering container
+        container.innerHTML = "";
+        Contacts.generate(container);
+
+    }
 })();
